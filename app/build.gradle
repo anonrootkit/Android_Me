@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
+<<<<<<< HEAD
     compileSdkVersion 30
     defaultConfig {
         applicationId "com.example.android.android_me"
@@ -9,6 +10,17 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+=======
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.example.android.android_me"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+>>>>>>> b32773dfafb43c3bbe0eec927ee5517a4397accd
     }
     buildTypes {
         release {
@@ -16,6 +28,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+<<<<<<< HEAD
 
 
     compileOptions {
@@ -28,4 +41,15 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+=======
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    testCompile 'junit:junit:4.12'
+>>>>>>> b32773dfafb43c3bbe0eec927ee5517a4397accd
 }
